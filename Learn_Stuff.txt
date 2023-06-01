@@ -2,7 +2,7 @@
                                   UNIX
 --------------------------------------------------------------------------------
 - UNIX Process Management: https://www.youtube.com/watch?v=kbd0dnsRsN0&list=PLRqP9CEqxmBzUjUkVhb9w_nQ7LUtactkF&index=3
-- 
+- Unix terminals and shells : https://www.youtube.com/playlist?list=PLFAC320731F539902
 - 
 - 
 - 
