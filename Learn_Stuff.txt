@@ -15,11 +15,19 @@
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 - Database Basics cource: https://planetscale.com/courses/mysql-for-developers/introduction/course-introduction
 - syabase command: http://mperdikeas.github.io/sybase-ase.html
-- 
-- 
-- 
-- 
-- 
+- Index best explanation (Gate Smarter): https://www.youtube.com/watch?v=E--yzX05_k8&t=530s
+- Index Architecture (Best Visulitation) - https://youtu.be/p9FlnOPltA8
+- Use Indexes for Faster Search in SQL (Questpond)- https://youtu.be/rtmeNwn4mEg | StoreProc vs Simple SQL- https://youtu.be/qykBERl-Xcg | 8kB - https://youtu.be/He8MRttysmY
+  sql server Interview Q/A: https://youtu.be/9hfjC-BpY20 | nth highest salary - https://youtu.be/ZGoXSJPNtGY
+ - Learn index (SQLMaestros)- https://youtu.be/24w0CQF6zds
+- (arpitbhayani blogs) ACID - https://arpitbhayani.me/blogs/atomicity/
+- How Do Databases Store Tables on Disk? (Hussein Nasser) - https://youtu.be/DbxddGtHl70 |B-tree vs B+tree DB index - https://youtu.be/UzHl2VzyZS4
+- SQL Server Performance Tuning and Query Optimization (kudvenkat) -https://youtube.com/playlist?list=PL6n9fhu94yhXg5A0Fl3CQAo1PbOcRPjd0
+- Window function (techTFQ)- https://youtu.be/Ww71knvhQ-s
+
+-->Playlist
+-SQL Server tutorial for beginners (kudvenkat) - https://www.youtube.com/playlist?list=PL08903FB7ACA1C2FB
+-DBMS (Gate smarter) - https://www.youtube.com/playlist?list=PLxCzCOWd7aiFAN6I8CuViBuCdJgiOkT2Y
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
                                  OS
@@ -31,7 +39,17 @@
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
                                OTHERS
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
-- 
-- 
-- 
-- 
+---> Youtubers:
+SQLMaestros, Questpond, techTFQ, kudvenkat - only sql
+arpitbhayani, Hussein Nasser - CS in depth 
+Gate Smarter - OS, SQL, CS in hindi
+
+UNIX: servergyan, pedagogy, Ethical harsh (hindi) 
+System design : Gaurab sen, MsDeep singh,Job Mantra - scenario based qa
+
+--->Websites/Blogs:
+-Great resources for Solaris - https://www.thegeekdiary.com/
+-UNIX indepth how to check long runnign process and more - https://www.systranbox.com/
+-DB performance (Need to buy book): https://use-the-index-luke.com/sql/anatomy
+-Twitter : Julia Evans (@b0rk) - wizardzines.com | Alex Xu - blog.bytebytego.com (email subscribe for both)
+-
