@@ -13,7 +13,7 @@
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
                                DATABASE
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
-- Database Basics cource: https://planetscale.com/courses/mysql-for-developers/introduction/course-introduction
+- Database Basics course: https://planetscale.com/courses/mysql-for-developers/introduction/course-introduction
 - syabase command: http://mperdikeas.github.io/sybase-ase.html
 - Index best explanation (Gate Smarter): https://www.youtube.com/watch?v=E--yzX05_k8&t=530s
 - Index Architecture (Best Visulitation) - https://youtu.be/p9FlnOPltA8
@@ -51,5 +51,10 @@ System design : Gaurab sen, MsDeep singh,Job Mantra - scenario based qa
 -Great resources for Solaris - https://www.thegeekdiary.com/
 -UNIX indepth how to check long runnign process and more - https://www.systranbox.com/
 -DB performance (Need to buy book): https://use-the-index-luke.com/sql/anatomy
+-Java revisited 
+  1)UNIX interview QnA: https://javarevisited.blogspot.com/2011/05/unix-command-interview-questions.html#axzz7zvQ96zGJ 
+  2)Java debugging interview QnA: https://javarevisited.blogspot.com/2022/09/java-debugging-interview-questions.html#axzz818FjrlLq
+  3)Kill process on open port : https://javarevisited.blogspot.com/2015/11/how-to-find-pid-of-process-listening-on-a-port-unix-netstat-lsof-command-examples.html#axzz818FjrlLq
+  4)Long runnig porcess : https://javarevisited.blogspot.com/2019/02/linux-command-to-find-how-long-process.html#axzz818FjrlLq
 -Twitter : Julia Evans (@b0rk) - wizardzines.com | Alex Xu - blog.bytebytego.com (email subscribe for both)
 -
