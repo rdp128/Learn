@@ -1,0 +1,207 @@
+::Scenario Based Questions and Answer:: [If it working how it works what steps involved]
+----------------------------------------------------------------------------------------
+1)What is problem vs Incident
+Trades not loading  in MBSE
+-It's not loading at all for one cleints or multiple cleints(Incident)
+-Trades loading but can see due to some set up issue error such as [Product code and product type set up is missing]  (Problem)
+
+Access to WebApps
+-Multiple users are not able to launch application (Incident)
+-Users are able to launch apps but not able to access particular pages or apps (Problem)
+
+2)Application process running longer than expected as it has dependency on DB
+- Job is waiting for some external data feed and data feed is not arrived on time
+- job/process must used admin id/test id which has permission to Insert/Update data got locked
+  -admin id permission got revoked
+- check DB/Application has enough space available or not?
+- DB server is up and runnig able to connect to DB?
+- Application server is up and runing?
+- Check on application side is there any other process is occuping whole CPU usage and make sure enough CPU  usage available for our job to process
+- DB deadlocked happen or not?
+- Data format is correct or not there shouldn't be any data quality issue
+- Any recent changed on code base happen or not
+
+3)Data Quality issue data is incorrect, data is in incorrect format. Identify faulty record
+- check feed file any special charcher is there --> grep -vn "^[a-zA-Z0-9]*$" fileName
+- Convert that file in unix format using dos2unix
+4)Track usage of CPU in linux	
+- top  - 2 area summary process by users 
+  how many users are looged in. Load average of CPU in past 5,10,15 mins
+  tells memory usage show info of RAM and SWAP memory, runnig/Zombie/Stopped process
+  
+- sar command list CPU usage with set of interval
+
+5)witr a Script
+  recon data report loaded in DB
+  load data from X and Y system - File watcher 
+  Job is completed or not  - check ps -aef | grep job name 0 record job is completed
+  Verify count for bus date - connect to DB and query rowcout on current bus dat and validate is >0
+  email
+  
+6)User face perfomance issue while accessing our application kind of slow
+  [System is very slow/screen not loading]
+  -Why it slow. Proble with that specific user in specific env/region?
+  -Slowness all the time or specific time on day?
+  -Check CPU usage on server side
+  -Check on server side is there any other process is occuping whole CPU usage and make sure enough CPU usage available for our job to process
+  - Upper limits for parameters such as file descriptors, ulimit, storage quota
+  - Number of user accesing application weeks ago become huge?
+  - Any user trying to pull huge data reports?
+  - Optimize business logic on web application if necessary.
+  - Inode exhaustion could be a reason. Means, enough disk space but too many small files.
+  - Any DDOS traffic? check the network logs and block it if yes.
+  - Underlying hardware or datacenter fault? 
+  
+7)Slow server
+  -One application slow or all application
+  -CPU usage top (dynamic view) and PS (Status view)
+  -Daemon which is useless and still runnig?
+  -Zombie process
+  -Disc space df -h, du -sh (archive/remove)
+  - Inode exhaustion could be a reason. Means, enough disk space but too many small files.
+    (delete empty file)
+  -Reboot server
+ 
+8)How to check whether a process is daemon or not? [how to find unkown daemon - jobs]
+  -PPID 1?
+  -Has TTY attached?
+  -Is it a service? sudo service ...?
+  -Is it managed by Systemd, Upstart or SysV?
+  -Is it listening on a port?
+  -Is it writing to a log file? Syslog?
+
+9)Not able to create file in linux?
+  -No space left df & du
+  -Permission issue [users has proper permission to create file on dir ls -l]
+  -High CPU cosumption: Every command we execute has it own process. Any other programm using 100% CPU
+   top
+  -Network issue
+  -Inode exhaustion could be a reason. Means, enough disk space but too many small files.
+    (delete empty file) ls -li
+  -PID exhaustion
+   runnig command in unix involved two steps fork: create new duplicate process exec: replace new process with the process you want to run . Bash will do this automatically
+   check max PID -> /proc/sys/kerel/pid_max
+
+10)Secure SSH server
+  -We can use SSH protocol which is much secure use encyption to send/receive data	
+  -Use SSH keys because it's very hard to decypt
+  -firewall handle network traffic what request coming and going out from server
+  -use VPN not allowing public diretly to access
+  -networking rule IP and port. Remove unneseccary rule  
+
+10.1)Troubleshooting SSH connectivity issue:
+  -ping : ping google.com to check packed send and received
+  -Permission : Do we have proper permission to connect to server
+    -Check IP and port is correct?
+	-Private key and public key is there on server
+  -network issue 
+  -firwall is not blocking from local computeroutput
+  -SSH daemon is running or not?
+  -Define limit to make maximum connect from one IP to make sure is human or script DDOS attack
+
+11)Linux boot up process
+  -BIOS : Basic input/output System.Attached hardware keyboard working fine or not
+  -MBR : Master boot record is responsible for grub loading
+  -GRUB : muliple OS installed. Not seen grub splash screen then issue with grub
+  -Kernel : core of OS. Kernal execute init prog first which PID is 1
+    -dmseg
+  -Init : Parent process 
+
+
+12)what happen when you type command in shell?
+
+13)As middle office we receive data from front office and send it to back office back office complain there is deley in receive data even in log we see our apps sent data in 0.10 secs
+  -Check id there is any change happened in the enviroment in past couple of days?
+  -Check app & DB health check 
+  -check app/DB status by login and see if it responding?
+  -server rebooted proerly?
+  -sufficient resources are avaialble (Phyical memoery or virtual memory)
+  -Check database backups: Check that the database backups are up to date and can be used to restore the database in case of a failure
+  -check logs in error, do data validation on backup/replication server is in sync with primary DB
+  -Check DB/Apps logs
+  -Check if incoming traffic has increased in comparision of usual load in the application
+  -downstream application is not capabale enough to handle additional traffic [check cpacity of their infrastructure] 
+  -Multiple thread with time out of 60 seconds
+  -500 delivry thread
+------------------------------------------------------------------------------------------------------------------------------------------------------
+1)MBSE is not able load to all clients file how do you troubleshoot?
+-clients book trade in Front end system -> MS -> MBSE
+a)Is MQ is up and running? dspmq - > If the command returns a list of queue managers, then MQ is up and running. If it returns an error message, then MQ may not be running.
+ -If the queue manager is running, the command will display information about the queue manager, such as its name, status, and version.
+ -Start QM : strmqm
+b)Is MQ stuck on any particular messages : check CURDEPTH should be ZERO
+c)Ensure all Daemons jobs/process which is up and running? 
+  -We have BBGLoader (J) -> Trades
+  -BBG Impoter -> pick trades from Trades table and insert into tba_trades
+  -check logs of all process
+d)check in DB when is the last trades process? From last process trades to current timesatmp what all things happen in logs
+e)If found some message from frontend has some data issue(Special character ?) then quratine it and try to process other after bouncing all require process
+f)run debug SQL command to analayze more in depth.
+
+
+2)Any investigation you done in windows based system?
+
+3)How do you go about finding Rogue process?
+A rogue process is a computer program or application that runs on a system without the user's knowledge or consent and consumes system resources, such as memory, CPU, and disk space, in a way that significantly affects the performance of the system or causes instability.
+
+In Linux:
+TOP : display a list of all running processes on the system. The command will display a real-time list of processes and their resource usage, such as CPU and memory usage. Look for any processes that are using a high amount of resources or appear suspicious.
+Check system logs:
+Use a system monitoring tool: (/var/log/syslog)
+Scan for malware: Rogue processes can sometimes be caused by malware or viruses. Use an anti-virus tool to scan your system for any malicious software.
+
+In Windows 
+Open Task bar, Check CPU usage, Memory Usage,Use Resource Monitor (Win + R -> resmon), scan for malware
+systemlog(Win + R -> eventvwr) check for error
+
+
+3)In MBSE Every file getting process twice how to troubleshoot?
+-2 time BBGLoader process start identify using ps -aef | grep bbg loader command and kill it
+-Identify the tables that are being affected by the duplicate data. [ This can usually be done by reviewing the database logs or by querying the affected tables for any duplicate entries. ]
+-Check the code or configuration for those processes to ensure that they are correctly handling duplicates and are not 
+-If the rogue process cannot be identified through monitoring or analysis, consider adding additional logging or tracing to the database or the application to track down the source of the duplicate data.
+
+
+4)Who is Incharge of Incident user communication to clients?
+
+5)what is bond you worked on any bond product such as security set up missing?
+
+6)recurring issue in MBSE?
+-Trades not loading
+  -Product code and product type set up is missing, customer not found , trader not found
+  -Wide spread issue not hitting to DB
+-Trades not matching with other party and not novated
+  -Barclays books trades with GS (After booking trades BCAP send some cancel/coreection message which is not allowed)
+  -due to missed cut off
+-On class days 
+  -Netting 72 hr days netting error
+    -FICC data mismatch
+	-Par amount not found
+-Book trades they need to allocate it 
+  -Open par mismatch with pool
+-Trades not flowing from MBSE to back end system
+-User creation/password/access issue
+
+Trades not loading  in MBSE
+-It's not loading at all (Incident)
+-Trades loading but can see due to some set up issue error such as [Product code and product type set up is missing]  (Problem)
+
+
+Challenages faced? How you overcome?
+-I have good exeperinced working in critical deadline / high pressure environment
+ keep my self calm as possible as I can
+ 
+ During after hours 
+ -Didn't recieve file from FICC on time
+ -Open item issue (As result of pair-off, assignment, reprice money difference is generated that MBSE sent to back end for futher processing) didn't triggered as previous day is holiday
+ -not any Manger nor collegue is available for help.
+ -Check details in config file such as which input file/parameter it takes
+ -Manually run open item job
+ -Validate it DB data sent to downstream 
+ 
+ 
+***Admin ID got locked after multimple attempt of wrong password
+   All jobs runs using admin user id.
+   Find out from Aleerts/logs. Engage Sybase team 
+   Suggested team to create generic ID for support user insted of admin id
+   
