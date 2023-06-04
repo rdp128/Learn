@@ -1,0 +1,27 @@
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+                                  UNIX
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+1)FILE DESCRIPTOR : 
+-Interview QnA: https://www.thegeekdiary.com/linux-interview-questions-open-files-open-file-descriptors/
+-In-depth : https://biriukov.dev/docs/fd-pipe-session-terminal/1-file-descriptor-and-open-file-description/
+* What will happen if two processes try to read from an open file at the same time?
+ANS: The operating system maintains a file descriptor table for each process, which contains information about the open files. When a process opens a file, it is assigned a unique file descriptor for that file. The file descriptor is used by the process to read from or write to the file.
+When multiple processes try to read from the same file simultaneously, the operating system handles the synchronization of access to the file. It ensures that the data read by each process is consistent and does not interfere with each other. The operating system may use various techniques, such as file locks or internal data structures, to coordinate the access.
+* What will happen if two processes try to write to an open file at the same time?
+
+ANS: Process A and Process B both open the same file for writing. They start writing data to the file at the same time without any synchronization. As a result:
+Process A writes the string "Hello" to the file. Simultaneously, Process B writes the string "World" to the file. Depending on the timing and scheduling of the processes, the resulting content of the file could be "Hello", "World", or an interleaved combination such as "HWeolrlod".
+
+file_path="shared_file.txt" ;lock_file="shared_file.lock"
+
+while true
+do( flock -x 200;echo "Hello from Script 2" >> "$file_path" ) 200>"$lock_file"
+   sleep 1
+done
+
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+                               DATABASE
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
