@@ -29,6 +29,8 @@
 -SQL Server tutorial for beginners (kudvenkat) - https://www.youtube.com/playlist?list=PL08903FB7ACA1C2FB
 -DBMS (Gate smarter) - https://www.youtube.com/playlist?list=PLxCzCOWd7aiFAN6I8CuViBuCdJgiOkT2Y
 
+-->Books
+https://dataschool.com/sql-optimization/
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
                                  OS
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
