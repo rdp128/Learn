@@ -2,6 +2,7 @@
                                   UNIX
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 1)FILE DESCRIPTOR : 
+-YouTube : https://www.youtube.com/playlist?list=PLLanLUxbALhPm6zJs_ShAciqcrJuyIo1B
 -Interview QnA: https://www.thegeekdiary.com/linux-interview-questions-open-files-open-file-descriptors/
 -In-depth : https://biriukov.dev/docs/fd-pipe-session-terminal/1-file-descriptor-and-open-file-description/
 * What will happen if two processes try to read from an open file at the same time?
@@ -19,6 +20,32 @@ do( flock -x 200;echo "Hello from Script 2" >> "$file_path" ) 200>"$lock_file"
    sleep 1
 done
 
+*Why UNIX used fork to create new processes?
+-Simplicity (low-latency) : Forking a process is a straightforward operation. It involves making a copy of the existing process, which allows for easy creation of new processes without much complexity.
+-Efficiency (concurrency) : The fork operation is efficient because it utilizes a technique called "copy-on-write." Copy-on-write means that the memory pages of the parent process are not immediately copied to the child process. Instead, they are shared between the two processes. Only when one of the processes modifies a shared memory page, a copy is made. This approach saves memory and improves performance.
+-Flexibility: Once the child process is created through fork, it can execute a different program using the "exec" system call. This ability to replace the code and data of a process with a new program allows for great flexibility in UNIX systems.
+-Fault tolerance : If parent process crash then child process is unaffected
+Fault tolerance focuses on the ability of a system to continue functioning properly in the presence of faults or failures.
+Resilience, on the other hand, has a broader scope. It encompasses the ability of a system to not only withstand and recover from failures but also to adapt, bounce back, and thrive in the face of various challenges, disruptions, or changing conditions.
+- 
+COPY-ON-WRITE:
+1. Initially, we have a parent process with its own memory pages. Let's say the parent process has allocated memory for an array called "data" and has stored some values in it.
+2. When the parent process forks and creates a child process, the memory pages of the parent process are not immediately copied to the child process. Instead, they are shared between the two processes. The memory pages are marked as read-only.
+3. Now, let's say the child process wants to modify the "data" array. Since the memory pages are marked as read-only, a copy of the page containing the "data" array is made specifically for the child process.
+4. The child process now has its own copy of the modified page. It can freely modify the "data" array without affecting the parent process.
+
+*When a child is forked then it inherits parent's file descriptors, if child closes the file descriptor what will happen ?
+-It inherits a copy of the file descriptor. So closing the descriptor in the child will close it for the child, but not the parent, and vice versa.
+
+*If child starts writing what shall happen to the file at the parent's end ? Who manages these inconsistencies , kernel or user ?
+-It's exactly (as in, exactly literally) the same as two processes writing to the same file. The kernel schedules the processes independently, so you will likely get interleaved data in the file.
+ if two indepenedent process try to write "hello" and "world" simultaneously to the same pipe, what will come out the other end is either "helloworld" or "worldhello", and never something like "hweolrllod".
+ 
+FILE DESCRIPTOR is duplicated after fork:
+File descriptors are not shared through the fork operation in UNIX. Instead, they are duplicated.
+When a process forks, the child process receives a copy of all the file descriptors from the parent process. The file descriptors in the child process initially refer to the same open files as the parent process. This means that if the parent process had a file open, the child process will also have that file open with a duplicate file descriptor.
+However, the file descriptors in the child process are independent of the parent process. If the parent or child process modifies the file descriptor or seeks within the file, it does not affect the other process.
+This duplication of file descriptors allows the child process to have access to the same open files as the parent process, but each process can independently perform read, write, or other operations on the file without interfering with each other.
 
 
 
