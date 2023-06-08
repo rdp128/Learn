@@ -1,7 +1,7 @@
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
                                   UNIX
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
-1)FILE DESCRIPTOR : 
+1)FILE DESCRIPTOR, FORCK & EXEC : 
 -YouTube : https://www.youtube.com/playlist?list=PLLanLUxbALhPm6zJs_ShAciqcrJuyIo1B
 -Interview QnA: https://www.thegeekdiary.com/linux-interview-questions-open-files-open-file-descriptors/
 -In-depth : https://biriukov.dev/docs/fd-pipe-session-terminal/1-file-descriptor-and-open-file-description/
@@ -47,7 +47,7 @@ When a process forks, the child process receives a copy of all the file descript
 However, the file descriptors in the child process are independent of the parent process. If the parent or child process modifies the file descriptor or seeks within the file, it does not affect the other process.
 This duplication of file descriptors allows the child process to have access to the same open files as the parent process, but each process can independently perform read, write, or other operations on the file without interfering with each other.
 
-
+FD,FORK,PIPE, HARD/SOFT links --> http://tzimmermann.org/archive/
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
                                DATABASE
