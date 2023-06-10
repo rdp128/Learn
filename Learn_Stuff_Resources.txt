@@ -3,17 +3,15 @@
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 - UNIX Process Management: https://www.youtube.com/watch?v=kbd0dnsRsN0&list=PLRqP9CEqxmBzUjUkVhb9w_nQ7LUtactkF&index=3
 - Unix terminals and shells : https://www.youtube.com/playlist?list=PLFAC320731F539902
+- df vs du great articale : https://linuxshellaccount.blogspot.com/2008/12/why-du-and-df-display-different-values.html
 - 
 - 
 - 
-- 
-
-
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
                                DATABASE
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
-- Database Basics course: https://planetscale.com/courses/mysql-for-developers/introduction/course-introduction
+- Database mysql devloper course [COMPLETED 06/10/2023]: https://planetscale.com/courses/mysql-for-developers/introduction/course-introduction
 - syabase command: http://mperdikeas.github.io/sybase-ase.html
 - Index best explanation (Gate Smarter): https://www.youtube.com/watch?v=E--yzX05_k8&t=530s
 - Index Architecture (Best Visulitation) - https://youtu.be/p9FlnOPltA8
