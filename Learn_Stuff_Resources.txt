@@ -62,6 +62,16 @@ System design : Gaurab sen, MsDeep singh,Job Mantra - scenario based qa
                                Networking
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 --->PROTOCOL
+ICMP
+TCP/IP
+UDP
+
+--->
+1)TraceRoute how it works : https://www.youtube.com/watch?v=jj6hJckkaYQ&t=151
+2)ping
+3)Ipconfig
+4)nslookup
+
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
                                JAVA
