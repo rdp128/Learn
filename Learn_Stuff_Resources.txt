@@ -61,22 +61,22 @@ System design : Gaurab sen, MsDeep singh,Job Mantra - scenario based qa
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
                                Networking
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
---->PROTOCOL
+--->PROTOCOL : https://youtu.be/j3LXv7RNFLY 
 ICMP
 TCP/IP
 UDP
+ARP
+DNS
+DHCP 
+FTP SFTP
 
---->
+---> all below command - https://youtu.be/rurs7cdT5cc | https://youtu.be/AimCNTzDlVo
 1)TraceRoute how it works : https://www.youtube.com/watch?v=jj6hJckkaYQ&t=151
-2)ping
+2)ping : https://youtu.be/z-oihW6VPUc | https://youtu.be/1PP7j0xrxbE | In depth : https://youtu.be/gbcWWfFrwzk
 3)Ipconfig
 4)nslookup
 5)Telnet
 
-FTP SFTP
-
-DNS
-DHCP 
 Subnet masking
 IPV4/IPV6
 
