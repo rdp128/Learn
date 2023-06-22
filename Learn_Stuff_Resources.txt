@@ -77,7 +77,7 @@ FTP SFTP
 4)nslookup
 5)Telnet
 
-Subnet masking
+Subnet masking : https://www.cloudflare.com/learning/network-layer/what-is-a-subnet/
 IPV4/IPV6
 
 HTTP HTPPS TLS
