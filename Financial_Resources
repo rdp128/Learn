@@ -1,0 +1,37 @@
+Bond market
+-----------
+-Duration
+-Zero coupon bond?
+
+Coupon vs Yield
+----------------
+
+
+FX Market
+-----------
+-
+-
+-
+
+MBS Business
+-----------
+-Class days A (30yr FNMA,FHLMC),B (15yr all 3 agency),C 30yr GNMA, Exits only in US, Underlying security is Home
+-Goverment Sponsor Agencies (GSEs) Fennie Mae, Freddie Mac, Gennie Mae
+-Institutional banks are clients
+-How MBS security form?
+  -Let say you want to buy home. you go to bank for loan sameway 1000+ other people go.
+  -Banks bundle this load in group of 100,1000 based in different location in US, based on credit score, type of home and Agency generate pools -> sell/buy in secodary market MBS
+-Purpose MBS 1)People get loan at affordable rate 2)Banks has enough money to loan out to people
+-TBA netting 72hr, Allocation (48hr),Poolnet/Extended poolnet(24hr), SD --> T+3
+-Clients books trades in Frontends (Winfits,ION,Bloomberg) -> MBSE MIDDLE OFFICE (business logic occur) -> go to seetlemet for back office
+-Trades not coming to MBSE due to 
+  -Prod code/pool type/Trader not found, set up issue --> Problem
+  -One clients trades not coming at all or multiple clients facing issue --> Incident 
+   -for GS one trades has junk character so blocked other trades to coming -> qurantine it and send others
+-SQL_DEBUG to checks alls DB it hits
+-MQ is up and processing trades by running MQ script -> provide MQ manager -> Channel name -> Queue name -> cur_depth is zero then trades is processed by MQ
+-Making sure all background jobs up  and running
+-Check logs -> query in DB to see data (join, subquery, Update/Delete, Aggregate fnctions)
+-Trades not matching with othet party, Broker trade (Novation issue)
+-FICC comes in between for gurenteed SD
+-Two type of trades -> Spec pool trade and TBA trade
