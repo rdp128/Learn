@@ -61,11 +61,12 @@ System design : Gaurab sen, MsDeep singh,Job Mantra - scenario based qa
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
                                Networking
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
-OSI Model : https://youtu.be/Dppl6iA2G8Q (In-depth)
+OSI Model : https://youtu.be/Dppl6iA2G8Q (In-depth) | https://blog.bytebytego.com/p/network-protocols-run-the-internet
 TCP/IP Model: https://youtu.be/gUOlE3If3yk (In-depth)
 
 --->PROTOCOL : https://youtu.be/j3LXv7RNFLY 
 ICMP ,UDP, ARP, SSH
+TCP vs UDP :
 
 DNS : https://youtu.be/Z8YoudlLx0k (In-depth)
 DHCP 
