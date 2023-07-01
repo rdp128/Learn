@@ -61,14 +61,21 @@ System design : Gaurab sen, MsDeep singh,Job Mantra - scenario based qa
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
                                Networking
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+OSI Model : https://youtu.be/Dppl6iA2G8Q (In-depth)
+TCP/IP Model: https://youtu.be/gUOlE3If3yk (In-depth)
+
 --->PROTOCOL : https://youtu.be/j3LXv7RNFLY 
-ICMP
-TCP/IP
-UDP
-ARP
-DNS
+ICMP ,UDP, ARP, SSH
+
+DNS : https://youtu.be/Z8YoudlLx0k (In-depth)
 DHCP 
+
 FTP SFTP
+Stateless vs Stateful protocol
+
+Cryprography playlist (https://youtube.com/playlist?list=PL7d8iOq_0_CWAfs_z4oQnCuVc6yr7W5Fp)
+Encryption : Symmetric AES,DES vs Assymetrics RSA | Publickey vs Private key | Certificate Autority -> Digital signature , Digital Certificate
+Hash,Encoding
 
 ---> all below command - https://youtu.be/rurs7cdT5cc | https://youtu.be/AimCNTzDlVo
 1)TraceRoute how it works : https://www.youtube.com/watch?v=jj6hJckkaYQ&t=151
@@ -78,9 +85,12 @@ FTP SFTP
 5)Telnet
 
 Subnet masking : https://www.cloudflare.com/learning/network-layer/what-is-a-subnet/
-IPV4/IPV6
+IPV4/IPV6 
+Public vs Private IP : https://youtu.be/92b-jjBURkw (Husseien)
 
-HTTP HTPPS TLS
+HTTP : https://youtu.be/tS-ieWMqD_4
+HTPPS : https://youtu.be/T4Df5_cojAs | https://youtu.be/10aVMoalON8
+SSL/TLS : https://youtu.be/r1nJT63BFQ0 (Hussien) | https://youtu.be/j9QmMEWmcfo (BytebyGo)
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
                                JAVA
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
