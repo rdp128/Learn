@@ -93,6 +93,7 @@ Public vs Private IP : https://youtu.be/92b-jjBURkw (Husseien)
 HTTP : https://youtu.be/tS-ieWMqD_4
 HTPPS : https://youtu.be/T4Df5_cojAs | https://youtu.be/10aVMoalON8
 SSL/TLS : https://youtu.be/AlE5X1NlHgg | certificate : https://youtu.be/r1nJT63BFQ0 (Hussien) | https://youtu.be/j9QmMEWmcfo (BytebyGo)
+what happens when you type a URL and press “Enter” : https://medium.com/@dkwok94/how-the-web-works-what-happens-when-you-type-a-url-and-press-enter-1958634f35bf
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
                                JAVA
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
