@@ -67,6 +67,7 @@ TCP/IP Model: https://youtu.be/gUOlE3If3yk (In-depth)
 --->PROTOCOL : https://youtu.be/j3LXv7RNFLY 
 ICMP ,UDP, ARP, SSH
 TCP vs UDP : (Hussien) https://youtu.be/qqRYkcta6IE
+TCP 3 way handshake : (Hussien) https://youtu.be/bW_BILl7n0Y
 
 DNS : https://youtu.be/Z8YoudlLx0k (In-depth)
 DHCP 
