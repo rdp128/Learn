@@ -65,14 +65,18 @@ OSI Model : https://youtu.be/Dppl6iA2G8Q (In-depth) | https://blog.bytebytego.co
 TCP/IP Model: https://youtu.be/gUOlE3If3yk (In-depth)
 
 --->PROTOCOL : https://youtu.be/j3LXv7RNFLY 
-ICMP ,UDP, ARP, SSH
+ICMP ,UDP, ARP, 
+SSH : https://medium.com/@hellomudit/understanding-ssh-workflow-66a0e8d4bf65
+
 TCP vs UDP : (Hussien) https://youtu.be/qqRYkcta6IE
 TCP 3 way handshake : (Hussien) https://youtu.be/bW_BILl7n0Y
 
 DNS : https://youtu.be/Z8YoudlLx0k (In-depth)
 DHCP 
 
-FTP SFTP
+FTP : 2 TCP coonection are used by FTP parallel. Control Connection : Port 21. Username/PWD, commands to change remote dir, retrive files 
+Data Connection : port 20. Sending actual file| Speed is good. Plain text
+SFTP : It use SSH which runs on TCP/IP. https://www.thruinc.com/what-is-sftp-secure-file-transfer-protocol/
 Stateless vs Stateful protocol
 
 Cryprography playlist (https://youtube.com/playlist?list=PL7d8iOq_0_CWAfs_z4oQnCuVc6yr7W5Fp)
