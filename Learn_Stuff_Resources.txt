@@ -6,7 +6,7 @@
 - df vs du great articale : https://linuxshellaccount.blogspot.com/2008/12/why-du-and-df-display-different-values.html
 - 
 - 
-- 
+
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
                                DATABASE
@@ -32,7 +32,8 @@ https://dataschool.com/sql-optimization/
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
                                  OS
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
-- 
+- FAILOVER -> Moving from one server to another server withing same data center for e.g. MBSEP1/P2 fails MBSEP3 will take over
+  DR (disaster recovery) -> Moving from one data center to another data center server. No failover server in DR
 - 
 - 
 
