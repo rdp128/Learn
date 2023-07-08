@@ -14,7 +14,8 @@
 - Database mysql devloper course [COMPLETED 06/10/2023]: https://planetscale.com/courses/mysql-for-developers/introduction/course-introduction
 - syabase command: http://mperdikeas.github.io/sybase-ase.html
 - Index best explanation (Gate Smarter): https://www.youtube.com/watch?v=E--yzX05_k8&t=530s
-- Index Architecture (Best Visulitation) - https://youtu.be/p9FlnOPltA8
+- Indexes Basic Exmaplanation (ByteByTeGo) : https://open.substack.com/pub/bytebytego/p/database-indexing-strategies?r=1rwp04&utm_campaign=post&utm_medium=web
+- Index Architecture (Best visualization) - https://youtu.be/p9FlnOPltA8
 - Use Indexes for Faster Search in SQL (Questpond)- https://youtu.be/rtmeNwn4mEg | StoreProc vs Simple SQL- https://youtu.be/qykBERl-Xcg | 8kB - https://youtu.be/He8MRttysmY
   sql server Interview Q/A: https://youtu.be/9hfjC-BpY20 | nth highest salary - https://youtu.be/ZGoXSJPNtGY
  - Learn index (SQLMaestros)- https://youtu.be/24w0CQF6zds
